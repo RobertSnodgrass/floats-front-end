@@ -3,16 +3,43 @@
 /* created by Elyse Holladay @elyseholladay ----------------- */
 /* ---------------------------------------------------------- */
 
-/* Example 09 */
+/* Example 08 */
 
-.header {}
+.container {
+	width: 1024px;
+	clear: both;
+	margin: 0 auto;
+}
 
-.sidebar {}
+.header {
+	float: left;
+	width: 100%;
+	/*After pulling the header out of the container div, make sure the container is clearing it
+	/*or else there is overlap
+	*/
+}
 
-.main-content {}
+.sidebar {
+	/*display: inline-block;*/
+	/*clear: left;*/
+	float: left;
+	width: 150px;
+	height: 250px;
+}
 
-.sub-content {}
+.main-content {
+	display: inline-block;
+	width: 634px;
+	height: 250px;
+}
 
-.footer {}
+.sub-content {
+	/*display: inline-block;*/
+	float: right;
+	width: 200px;
+	height: 250px;
+}
 
-/* what do you have to add to make the sidebar and content and footer not be the full width of the browser? */
+.footer {
+	clear: both;
+}

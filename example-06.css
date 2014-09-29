@@ -11,24 +11,50 @@
 }
 
 
-.main-content {}
+.main-content {
+	float: left;
+	/*changing float to right both on main and widget class = same as flipping horizontal*/
+	/*Interesting - if you float left on main but leave widgets to right, its the same as
+	/*both being floated right*/
+
+}
 /* hint! what do you need to add here? */
 
 .widget {
 	/* how do you make the widgets float next to each other? */
 	/* what happens when you change float left to float right? why? */
+	float: left;
+	display: block-inline;
+	margin: 10px;
+	width: 200px;
+	height: 200px;
 }
 
 
 .footer {
 	/* hint! */
+	clear: both;
 }
 
 
-/* Bonus: what happens if you make a couple of the widgets taller than the other? */
-/*.widget.tall {}*/
+/*Bonus: what happens if you make a couple of the widgets taller than the other? */
+/*.widget.tall {
+	height: 800px;
+		/*this is cray cray and NO UNDERSTAND
+		/*HEAD PAIN
+		/*Seems that because the next row is "intruded upon" by the taller-than-normal widget,
+		/*it causes all space to the left of it to be claimed by the taller widget, meaning
+		/*that the next widget cannot iterate until it reaches some amount of space to the
+		/*right of the taller widget.  In other words, it's like a weird form of crowd control -
+		/*I suspect if I made other widgets taller during tests, I could confirm this, but I have
+		/*a lot of homework to still finish
+
+}*/
 
 /* this CSS class targets widget #5. what can you do to it to make the rows of widgets get back in order? */
+/*Unsure what this means - are the rows out of order somehow?*/
+/*Wait, am I supposed to comment this out and see what happens?  Ok I'll do that...*/
+/*Well it just changes the color.  Moving on for now, I'm probably missing something here...*/
 .widget.fix {
 	background: #8F1B65;
 }

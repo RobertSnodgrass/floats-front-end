@@ -6,23 +6,80 @@
 /* Example 07 */
 
 .container {
-	width: 1024px; /* change me to a percentage width, like 80% */
+	width: 80%; /* change me to a percentage width, like 80% */
 	margin: 0 auto;
 }
 
 
-.header {}
+.header {
+	width: 100%;
+	float: left;
 
-.logo {}
+}
 
-.navigation {}
+.logo {
+	float: left;
+	width: 30%;
 
-.sidebar {}
 
-.main-content {}
+}
 
-.sub-content {}
+.navigation {
+	float: right;
+	width: 60%;
 
-.sub-content-2 {}
+}
 
-.footer {}
+.sidebar {
+	float: left;
+	width: 30%;
+}
+
+.main-content {
+	width: 100%;
+	clear: both;
+	float: left;
+	/*I think I'm getting the hang of this
+	/*If you float some element, then it's basically like saying "alright, we're going to subdivide the page into
+	/*a float section and everything else below it" 
+	/*So you're creating two sections - float in the top + everything below it
+	/*But now I want to make a second float section, dividing the page into three sections, but how can I do that
+	/*and make sub-elements float accordingly in it?
+	/*Well, if I tell the next main element to clear the first floated section, AND then set it to float, it's
+	/*like creating a secondary floated section where I can now position elements again
+	/In other words:
+		[Float Section with elements+sub element children]
+		[Second Float Section **WITH CLEAR: BOTH** attribute = now I can float sub element children accordingly]
+		[Theoretically I could keep making new sections by CLEAR:BOTH and FLOAT code]
+		[Footer = has CLEAR:BOTH attribute as well, which makes sense + goes along with my theory]
+
+	/*I do maintain a healthy bit of self-skepticism that I'm doing this wrong, since self-doubt is more or less
+	/*my default perspective.  So I'll have to ask to see if I'm thinking about all of this correctly
+	*/
+}
+
+.sub-content {
+	float: right;
+	width: 60%;
+	/*If I set the total percentage above 100%, then elements move down to the next line
+	/*So if I leave sidebar at 30% but put sub content to 70%, it's 100% total, so width is fully filled, everythings fine
+	/*But if I put the sub content to 75%, it's now 105% total, which is too wide; sub content gets moved down to the next line
+	/*Everything below subcontent 1 moves down
+	*/
+}
+
+.sub-content-2 {
+	float: right;
+	clear: right;
+	width: 60%;
+	/*Going with the above, if I set subcontent2 to 75%, but it's below the sidebar, then there's technically no problem - 
+	/*Elements below would get pushed down, but since subcontent2 already clears the sidebar anyway, there's nothing that
+	/*can't horizontally fit
+	*/
+
+}
+
+.footer {
+	clear: both;
+
+}

@@ -10,14 +10,51 @@
 	margin: 0 auto;
 }
 
-.header {}
+.header {
+	float: left;
+	width: 100%;
+}
 
+.sidebar {
+	/*display: inline-block;*/
+	/*clear: left;*/
+	/*It seems that clearing and floating is redundant in this case, which makes sense given
+	/*that there's no child elements in header this time.  If I tell side bar to clear left,
+	/*it will start on the next line.  However, I also need it to float given the needs of this
+	/*this exercise - only clear is redundant while float is vital.
+	*/
+	float: left;
+	/*Just as I thought - you can remove clear, and everything is fine provided float is in place.
+	/*But if I just try to clear, float being removed causes all kinds of problems.
+	/*Clear by itself results in sidebar  being fully seen visuaully, but the formatting gets
+	/*messed up becaucse main and sub no longer start on the same line as side.
+	*/
+	width: 150px;
+	height: 250px;
+}
 
-.sidebar {}
+.main-content {
+	display: inline-block;
+	width: 634px;
+	height: 250px;
+	/*Interesting.  Originally I had set sidebar, main, and sub as display: inline-block, and while this
+	/*did result in all three elements aligned horizontally, there was a small amount of negative space
+	/*in between them (as in a margin).;
+	/*A Google search said to float everything.  I was skeptical because I'm no longer using sub-element
+	/*children for side and sub in terms of main.
+	/*However, if I float side to the left and sub to the right, and then set the widths accordingly,
+	/*everything works....almost.  I had to also set main to have a display: inline-block attribute,
+	/*where as the other did not need this.  ;
+	*/ 
+}
 
-.main-content {}
+.sub-content {
+	/*display: inline-block;*/
+	float: right;
+	width: 200px;
+	height: 250px;
+}
 
-.sub-content {}
-
-
-.footer {}
+.footer {
+	clear: both;
+}

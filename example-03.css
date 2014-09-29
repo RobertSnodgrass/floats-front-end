@@ -11,18 +11,23 @@
 }
 
 
-.header {}
+.header {
+
+}
 
 .sidebar {
-	/* hint! */
+	float: right;
+	height: 250px;
+	width: 250px;
 }
 
 .main-content {
-	/* hint! */
+	height: 250px;
+	width: 734px;
 }
 
 .footer {
-	/* hint! */
+	clear: both;
 }
 
 /*

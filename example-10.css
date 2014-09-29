@@ -3,16 +3,61 @@
 /* created by Elyse Holladay @elyseholladay ----------------- */
 /* ---------------------------------------------------------- */
 
-/* Example 10 */
+/* Example 08 */
 
-.header {}
+.container {
+	/*width: 1024px;
+	clear: both;
+	margin: 0 auto;*/
+}
 
-.sidebar {}
+.header {
+	float: left;
+	width: 100%;
+	/*After pulling the header out of the container div, make sure the container is clearing it
+	/*or else there is overlap
+	*/
+}
 
-.main-content {}
+.container{
+	clear: both;
+	width: 80%;
+	margin: 0 auto;
+	/*Container can't be the full length of the browser window, so I made it 80%*/
+}
 
-.sub-content {}
+.sidebar {
+	/*display: inline-block;*/
+	/*clear: left;*/
+	float: left;
+	width: 25%;
+	/*25% is kind of a guess but it should be fine*/
+	height: 250px;
+}
 
-.footer {}
+.main-content {
+	display: inline-block;
+	width: 55%;
+	/*55% because 55 + 25 = 80, and assignment says 80% constrained*/
+	height: 250px;
+}
+
+.sub-content {
+	/*display: inline-block;*/
+	float: right;
+	width: 200px;
+	height: 250px;
+}
+
+.footer {
+	clear: both;
+	/*width: 90%;*/
+	/*Did this to prove theory on how to prevent full width*/
+	/*margin: 0 auto;*/
+	/*Seems to center the object*/
+}
+
 
 /* what do you have to add to make the sidebar and content and footer not be the full width of the browser? */
+/* --> Setting the container to 80% makes sure its sub element children can't be 100% */
+/* I could just set the footer to a percentage to prevent it from being full width */

@@ -5,14 +5,42 @@
 
 /* Example 11 */
 
-.header {}
+.header {
+	float: left;
+	width: 100%;
+}
 
-.main-content {}
+.logo{
+	float: left;
+}
+
+.navigation{
+	float: right;
+}
+
+.main-content {
+	float: left;
+}
 /* hint! */
 
-.post {}
+.post {
+	float: right;
+	clear: both;
+	display: inline-block;
+
+
+}
 /* hint! */
 
-.image {}
+.image {
+	float: left;
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+}
 
-.post_excerpt {}
+.post_excerpt {
+	float: right;
+	width: 80%;
+	display: inline-block;
+}
