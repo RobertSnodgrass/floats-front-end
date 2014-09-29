@@ -23,37 +23,41 @@
 .icon.urgent {
 	border: solid 1px red;
 	display: inline-block;
+	/*float: left;*/
 
 }
 
 .icon.medium{ 
-	border: solid 1px black;
+	/*border: solid 1px black;*/
 	float: left;
 }
 
 .icon {
-	border: solid 1px black;
+	/*border: solid 1px black;*/
 	float: left;
 }
 
 /* Info of the todo, title and date */
 .todo-info {
+	/*clear: both;*/
 	display: inline-block;
-	border: solid 1px red;
+	float: left;
+	border: solid 1px orange;
 }
 
 /* Title */
 .todo-title {
 	display: inline-block;
 	width: 100%;
-	border: solid 1px black;
+	/*float: left;*/
+	/*border: solid 1px black;*/
 	font-family: Garamond;
 	font-size: 150%;
 }
 
 /* Date */
 .todo-date {
-	border: solid 1px black;
+	/*border: solid 1px black;*/
 	width: 100%;
 }
 
@@ -63,10 +67,11 @@ input[type=checkbox] {
 }
 .date-note{
 	background-color: yellow;
-	border: solid 1px black;
+	/*border: solid 1px black;*/
 }
 
 .check{
 	display: inline-block;
-	border: solid 1px red;
+	float: right;
+	/*border: solid 1px red;*/
 }
